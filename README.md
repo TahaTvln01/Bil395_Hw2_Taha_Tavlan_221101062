@@ -1,17 +1,15 @@
 # Bil395_Hw2_Taha_Tavlan_221101062
 
 Ada Calculator
+
 Genel Bakış
-Bu proje, Ada programlama dili kullanılarak geliştirilmiş basit bir komut satırı hesap makinesidir. Kullanıcıdan alınan matematiksel ifadeleri değerlendirir ve sonucu ekrana yazdırır. Toplama (+), çıkarma (-), çarpma (*) ve bölme (/) işlemlerini destekler.
+  Bu proje, Ada programlama dili kullanılarak geliştirilmiş basit bir komut satırı hesap makinesidir. Kullanıcıdan alınan matematiksel ifadeleri değerlendirir ve sonucu ekrana yazdırır. Toplama (+), çıkarma (-), çarpma (*) ve bölme (/) işlemlerini destekler.
 
 Nasıl İmplement Edildi?
-Ada.Text_IO ve Ada.Integer_Text_IO kütüphaneleri kullanılarak giriş ve çıkış işlemleri gerçekleştirildi.
-
-Kullanıcının girdiği matematiksel ifade, operatör ve operandlar ayrıştırılarak değerlendirildi.
-
-Hatalı girişler için temel hata kontrol mekanizmaları eklendi.
-
-Döngü yapısı kullanılarak kullanıcı çıkış yapmak isteyene kadar sürekli giriş alındı.
+  Ada.Text_IO ve Ada.Integer_Text_IO kütüphaneleri kullanılarak giriş ve çıkış işlemleri gerçekleştirildi.
+  Kullanıcının girdiği matematiksel ifade, operatör ve operandlar ayrıştırılarak değerlendirildi.
+  Hatalı girişler için temel hata kontrol mekanizmaları eklendi.
+  Döngü yapısı kullanılarak kullanıcı çıkış yapmak isteyene kadar sürekli giriş alındı.
 
 Kurulum:
   Öncelikle GNAT (GNU Ada Compiler) yüklenmelidir
@@ -48,8 +46,9 @@ Notlar
 
 
 Perl Calculator
+
 Genel Bakış
-Bu proje, Perl programlama dili kullanılarak geliştirilmiş bir komut satırı hesap makinesidir. Kullanıcıdan alınan matematiksel ifadeleri değerlendirir ve sonucu ekrana yazdırır. Değişken tanımlama desteği sunar ve temel aritmetik işlemleri destekler.
+  Bu proje, Perl programlama dili kullanılarak geliştirilmiş bir komut satırı hesap makinesidir. Kullanıcıdan alınan matematiksel ifadeleri değerlendirir ve sonucu ekrana yazdırır. Değişken tanımlama desteği sunar ve temel aritmetik işlemleri destekler.
 
 Nasıl İmplement Edildi?
   Perl'in eval fonksiyonu kullanılarak matematiksel ifadeler dinamik olarak hesaplandı.
@@ -88,6 +87,53 @@ Notlar
 
 
 
+Prolog Calculator
+
+Prolog Hesap Makinesi
+Özellikler
+   Temel aritmetik işlemleri destekler: `+`, `-`, `*`, `/`
+   Değişken atama özelliği
+   Etkileşimli komut satırı arayüzü
+   SWI-Prolog ile çalışır
+  
+Kurulum
+  SWI-Prolog'u [SWI-Prolog Resmi Web Sitesi](https://www.swi-prolog.org/) üzerinden indirin ve kurun.
+  Bu depoyu klonlayın veya `calculator.pl` dosyasını indirin.
+  `calculator.pl` dosyasını çalışma dizininize yerleştirin.
+
+Kullanım
+  Hesap Makinesini Çalıştırma
+    Terminali açın ve `calculator.pl` dosyasının bulunduğu dizine gidin.
+    SWI-Prolog'u başlatın:
+     swipl
+    Prolog dosyasını yükleyin:
+     ?- ['calculator.pl'].
+    Hesap makinesini başlatın:
+     ?- start.
+    Çıkış yapmak için `exit.` yazıp Enter'a basın.
+
+Örnek Terminal Çıktısı
+?- ['calculator.pl'].
+true.
+
+?- start.
+Prolog Hesap Makinesi. Çıkmak için "exit." yazın.
+> 5 + 4
+Sonuç: 9
+> (5 + 4) * 2
+Sonuç: 18
+> X is 5 + 4
+X = 9
+> Y is X * 2
+Y = 18
+> exit.
+
+Kod Açıklaması
+- `calculate/2`: Aritmetik ifadeleri özyinelemeli olarak değerlendirir.
+- `assign/2`: Değişkenlere dinamik olarak değer atar.
+- `get_value/2`: Bir değişkenin değerini döndürür veya tanımlı değilse 0 olarak ayarlar.
+- `start/0`: Etkileşimli bir komut satırı arayüzü sağlar.
+- `process/1`: Kullanıcı girdisini işler, ifadeleri veya atamaları değerlendirir.
 
 
 
