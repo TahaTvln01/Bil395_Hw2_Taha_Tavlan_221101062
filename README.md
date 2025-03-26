@@ -25,9 +25,6 @@ Kurulum:
 
 Örnek Terminal Çıktısı:
   taha@taha-virtual-machine:~/Bil395/calculator_ada$ gnatmake calculator.adb  
-  x86_64-linux-gnu-gcc-10 -c calculator.adb  
-  x86_64-linux-gnu-gnatbind-10 -x calculator.ali  
-  x86_64-linux-gnu-gnatlink-10 calculator.ali  
   taha@taha-virtual-machine:~/Bil395/calculator_ada$ ./calculator  
   > 5 * 3  
   Result:  15  
