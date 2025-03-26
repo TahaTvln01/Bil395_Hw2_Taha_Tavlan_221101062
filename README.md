@@ -113,20 +113,20 @@ Kullanım
     Çıkış yapmak için `exit.` yazıp Enter'a basın.
 
 Örnek Terminal Çıktısı
-?- ['calculator.pl'].
-true.
+  ?- ['calculator.pl'].
+  true.
 
-?- start.
-Prolog Hesap Makinesi. Çıkmak için "exit." yazın.
-> 5 + 4
-Sonuç: 9
-> (5 + 4) * 2
-Sonuç: 18
-> X is 5 + 4
-X = 9
-> Y is X * 2
-Y = 18
-> exit.
+  ?- start.
+  Prolog Hesap Makinesi. Çıkmak için "exit." yazın.
+  > 5 + 4
+  Sonuç: 9
+  > (5 + 4) * 2
+  Sonuç: 18
+  > X is 5 + 4
+  X = 9
+  > Y is X * 2
+  Y = 18
+  > exit.
 
 Kod Açıklaması
 - `calculate/2`: Aritmetik ifadeleri özyinelemeli olarak değerlendirir.
@@ -138,8 +138,85 @@ Kod Açıklaması
 
 
 
+Rust Hesap Makinesi
+
+Özellikler
+  Temel aritmetik işlemleri destekler: `+`, `-`, `*`, `/`
+  Değişken atama özelliği (örneğin: `x = 5`)
+  Etkileşimli komut satırı arayüzü
+  Rust programlama dili ile geliştirilmiştir
+
+Kurulum
+  Rust'ı [Rust Resmi Web Sitesi](https://www.rust-lang.org/) üzerinden yükleyin.
+  Bu depoyu klonlayın veya `calculator.rs` dosyasını indirin.
+  Rust yüklü olduğundan emin olun:
+    rustc --version
+  Programı derleyin:
+    rustc calculator.rs
+
+Kullanım
+  Hesap Makinesini Çalıştırma
+  Terminali açın ve derlenmiş dosyayı çalıştırın:
+    ./calculator
+  Komut satırına aritmetik ifadeler veya değişken atamaları girin.
+  Çıkış yapmak için `exit` yazıp Enter'a basın.
+
+Örnek Terminal Çıktısı
+  $ ./calculator
+  Simple Calculator in Rust (Type 'exit' to quit)
+  > 5 4 +
+  Result: 9
+  > 5 4 + 2 *
+  Result: 18
+  > x = 5
+  Result: 5
+  > y = x 2 * // ÇALIŞMIYOR!!!
+  Result: 10 // ÇALIŞMIYOR!!!
+  > exit
+
+Kod Açıklaması
+- `eval_expression`: Aritmetik ifadeleri değerlendirir ve değişken desteği sağlar.
+- `main`: Etkileşimli komut satırı arayüzünü yönetir.
+- Değişkenler bir `HashMap` kullanılarak saklanır.
 
 
+
+
+Scheme Hesap Makinesi
+
+Özellikler
+  Temel aritmetik işlemleri destekler: `+`, `-`, `*`, `/`
+  Etkileşimli komut satırı arayüzü
+  Scheme dilinde yazılmıştır
+
+Kurulum
+  Bir Scheme yorumlayıcısı yükleyin:
+    MIT/GNU Scheme: [MIT/GNU Scheme Resmi Sitesi](https://www.gnu.org/software/mit-scheme/)
+    Racket: [Racket Resmi Sitesi](https://racket-lang.org/)
+    Guile: [Guile Resmi Sitesi](https://www.gnu.org/software/guile/)
+  `calculator.scm` dosyasını indirin veya oluşturun.
+
+Kullanım
+  Hesap Makinesini Çalıştırma
+   scheme
+   (load "calculator.scm")
+   (calculator)
+
+Örnek Terminal Çıktısı
+  Scheme Calculator. Type (exit) to quit.
+  > (+ 5 4)
+  Result: 9
+  > (* (+ 5 4) 2)
+  Result: 18
+  > (exit)
+
+Kod Açıklaması
+  `calculator`: Kullanıcıdan giriş alır, ifadeyi değerlendirir ve sonucu ekrana yazdırır.
+  `loop`: Kullanıcı çıkış yapana kadar tekrar çalışır.
+  `(eval input (interaction-environment))`: Kullanıcının girdisini değerlendirir ve sonucu döndürür.
+
+## Yazar
+Taha Tavlan (221101062)
 
 
 
